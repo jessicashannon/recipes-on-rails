@@ -1,7 +1,13 @@
 class PetsController < ApplicationController
-
+  attr_accessor :cats :dogs
   require 'config/keys.rb'
-  def new
+  require 'nokogiri'
+
+  def cats
     petfinder = Petfinder::Client.new('PETFINDER_API', 'PETFINDER_SECRET')
+    cats = pets.find_pets('cat', 11237, count: 5)
+    photos = cats.first.photos
   end
+
+
 end

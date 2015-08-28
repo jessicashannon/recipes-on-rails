@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sentiments:</strong>
+  <%= @sentiment.sentiments %>
+</p>
+
+<%= link_to 'Edit', edit_sentiment_path(@sentiment) %> |
+<%= link_to 'Back', sentiments_path %>

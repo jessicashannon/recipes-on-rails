@@ -1,0 +1,21 @@
+<%= form_for(@sentiment) do |f| %>
+  <% if @sentiment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sentiment.errors.count, "error") %> prohibited this sentiment from being saved:</h2>
+
+      <ul>
+      <% @sentiment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sentiments %><br>
+    <%= f.text_field :sentiments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
