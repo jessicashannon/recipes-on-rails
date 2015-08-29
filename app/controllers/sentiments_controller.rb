@@ -51,9 +51,9 @@ class SentimentsController < ApplicationController
     end
   end
 
-  # def self.random
-  #   Sentiment.all.sample
-  # end
+  def self.random
+    Sentiment.random
+  end
 
   # DELETE /sentiments/1
   # DELETE /sentiments/1.json

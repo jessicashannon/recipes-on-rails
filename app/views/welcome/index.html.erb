@@ -21,10 +21,9 @@
     <div id="main-container" class="container">
       <div class="row">
         <div id="sidebar" class="col-md-8">
-          <h1>I'm a title!</h1>
-          <h3>Here's where our main content will go.</h3>
-          <h3>Like a dynamically served greeting ("")</h3>
-          <h3>And a link to a recipe for one.</h3>
+          <h1><%= Sentiment.random %></h1>
+          <% recipe = Recipe.random%>
+          <h1 class="text-muted"><a href="<%= recipe.url %>"><%= recipe.title %></a></h1>
           <br>
           <form><label for "new">
             <input type="submit" id="new" value="Click for a new recipe" class="form-control"></form>
@@ -32,9 +31,9 @@
         </div>
         <div id="content" class="col-md-4">
           <div id="winebox"><img src="wine-stock.jpg" class="img-thumbnail">
-          <br> Wine suggestion.</div>
+          <h5> Wine suggestion.</h5>
           <div id="catbox"><img src="cat.jpg" class="img-thumbnail">
-          <br>A cat goes here.</div>
+          <h5>A cat goes here.</h5>
         </div>
       </div>
 

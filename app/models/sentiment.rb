@@ -1,7 +1,7 @@
 class Sentiment < ActiveRecord::Base
   attr_accessor :random
 
-  def random
-    Sentiment.all.sample
+  def self.random
+    Sentiment.all.sample.sentiments
   end
 end
