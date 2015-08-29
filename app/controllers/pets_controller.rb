@@ -14,20 +14,21 @@ class Pet
   #This class calls the Petfinder API and creates a Pet object
   #with a @photo method by parsing the returned JSON.
 
-  attr_accessor :photo_url, :parsed
+  attr_accessor :photo_url, :parsed, :name, :breed
   def initialize
     @url = "http://api.petfinder.com/pet.getRandom?key=1f6146612a770ffd0189a4d95ffc5953&animal=cat&output=basic&format=json"
     apicall
-    if has_photos?
-      photo_url
-    else
-      @photo_url = "/cat.jpg"
+    photo_url
+
     end
+
   end
 
   def apicall
     petfinder = RestClient.get(@url)
     @parsed = JSON.parse(petfinder)
+    rescue
+      @photo_url = "/cat.jpg"
   end
 
   def has_photos?
@@ -35,7 +36,19 @@ class Pet
   end
 
   def photo_url
-    @photo_url = @parsed["petfinder"]["pet"]["media"]["photos"]["photo"][2]["$t"]
+    if has_photos?
+      @photo_url = @parsed["petfinder"]["pet"]["media"]["photos"]["photo"][2]["$t"]
+    else
+      @photo_url = "/cat.jpg"
+    end
+  end
+
+  def name
+    @name = @parsed["petfinder"]["pet"]["name"]["$t"]
+  end
+
+  def breed
+    # @breed = @parsed["stuff"]
   end
 
 end
