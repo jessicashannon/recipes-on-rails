@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150828214714) do
 
   create_table "wines", force: :cascade do |t|
     t.text     "color"
+    t.string   "url"
     t.text     "varietal"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

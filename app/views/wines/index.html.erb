@@ -7,6 +7,7 @@
     <tr>
       <th>Color</th>
       <th>Varietal</th>
+      <th>Url</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= wine.color %></td>
         <td><%= wine.varietal %></td>
+        <td><%= wine.url %></td>
         <td><%= link_to 'Show', wine %></td>
         <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
         <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
