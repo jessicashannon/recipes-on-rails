@@ -30,17 +30,26 @@
         </div>
         <div id="content" class="col-md-4">
           <div id="winebox"><img src="wine-stock.jpg" class="img-thumbnail">
-          <h5> Wine suggestion.</h5>
-          <div id="catbox"><img src="<%= PetsController.cat %>" class="img-thumbnail">
-          <h5> A cat goes here.</h5>
+          <% wine = Wineapi.new %>
+          <h5> How about a nice <a href="<%=wine.link%>"><%= wine.name %></a> with that?</h5>
+
+
+          <div id="catbox">
+            <% cat = Pet.new %>
+              <img src="<%= cat.photo_url %>" class="img-thumbnail">
+              <% if cat.name.include?("and") || cat.name.include?("&") %>
+                <h5><a href="mailto?<%= cat.email %>"><%= cat.name %> need a forever home!</a></h5>
+              <% else %>
+                <h5><a href="mailto?<%= cat.email %>"><%= cat.name %> needs a forever home!</a></h5>
+              <% end %>
         </div>
       </div>
     </div>
     <div id="sidebar" class="col-md-8">
-    <!--  <p>A project by <a href="http://jessicashannon.github.io">Jess</a> and <a href="samplelink.com">Chris</a>. Inspired by <a href="http://whatthefuckshouldImakefordinner.com/">another dinner generator.</a></p> -->
+    
     </div>
     <div id="content" class="col-md-4">
-
+      <p>Lonely Recipes is a Flatiron School student project by <a href="http://jessicashannon.github.io">Jess</a> and <a href="samplelink.com">Chris</a>. Inspired by <a href="http://whatthefuckshouldImakefordinner.com/">another dinner generator.</a></p>
     </div>
     </div>
 
