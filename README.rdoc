@@ -15,8 +15,11 @@ Installation
 No installation necessary to experience it, however if you'd like to utilize it yourself head on over to "_______"(repo url)fork it, download it, bundle install and viola!
 
 API reference
-We use the only one API, the petfinder API.
+Petfinder API:
 https://www.petfinder.com/developers/api-docs
+Wine.com API::
+https://api.wine.com/
+
 
 Tests
 No tests, thank god!
