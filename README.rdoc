@@ -5,23 +5,36 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+Synopsis
+Howdy! This is our 'recipes on rails' web application! What does it do? Glad you asked! It brings together, all in one place, the answers to these burning questions: what should I have for dinner, what wine should I have with it and where is a local pet I can adopt? In addition to this, we've also tied these elements together with a randomized 'sentiments generator', which posts a sentiment that may or may not be tailored to your emotional state at that given moment. 
 
-* System dependencies
+Motivation
+Besides wanting to bring together these individual elements in a unique way, we also wanted to flex our brand new rails muscles and learn by doing. 
 
-* Configuration
+Installation
+No installation necessary to experience it, however if you'd like to utilize it yourself head on over to "_______"(repo url)fork it, download it, bundle install and viola!
 
-* Database creation
+API reference
+Petfinder API:
+https://www.petfinder.com/developers/api-docs
+Wine.com API::
+https://api.wine.com/
 
-* Database initialization
 
-* How to run the test suite
+Tests
+No tests, thank god!
 
-* Services (job queues, cache servers, search engines, etc.)
+Contributors
+Jessica Shannon
+Chris McGuigan
 
-* Deployment instructions
+License
 
-* ...
+
+
+* Rails version
+Rails 4.2.4
+
 
 
 Please feel free to use a different markup language if you do not plan to run
