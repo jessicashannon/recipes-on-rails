@@ -19,6 +19,7 @@ class WinesController < ApplicationController
 
   # GET /wines/1/edit
   def edit
+    @wine = Wine.update(wine_params)
   end
 
   # POST /wines
@@ -69,6 +70,6 @@ class WinesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wine_params
-      params.require(:wine).permit(:color, :varietal, :url)
+      params.require(params[:wine]).permit(:id, :color, :varietal, :url)
     end
 end

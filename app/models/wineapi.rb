@@ -1,3 +1,4 @@
+
 require_relative "../../config/initializers/keys.rb"
 
 class Wineapi
@@ -10,7 +11,7 @@ class Wineapi
     json = RestClient.get(@url)
     @parsed_hash = JSON.parse(json)
   end
-	
+
   def name
   	@name = @parsed_hash["Products"]["List"][0]["Name"]
   end

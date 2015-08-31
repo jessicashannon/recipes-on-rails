@@ -29,9 +29,10 @@
             <input type="submit" id="new" value="Click for a new recipe" class="form-control"></form>
         </div>
         <div id="content" class="col-md-4">
-          <div id="winebox"><img src="wine-stock.jpg" class="img-thumbnail">
+          <!-- <div id="winebox"><img src="wine-stock.jpg" class="img-thumbnail">
           <% wine = Wineapi.new %>
           <h5> How about a nice <a href="<%=wine.link%>"><%= wine.name %></a> with that?</h5>
+        </div>  close winebox div -->
 
 
           <div id="catbox">
@@ -42,14 +43,12 @@
               <% else %>
                 <h5><a href="mailto?<%= cat.email %>"><%= cat.name %> needs a forever home!</a></h5>
               <% end %>
+          </div> <!-- close catbox div -->
         </div>
-      </div>
-    </div>
     <div id="sidebar" class="col-md-8">
-    
     </div>
     <div id="content" class="col-md-4">
-      <p>Lonely Recipes is a Flatiron School student project by <a href="http://jessicashannon.github.io">Jess</a> and <a href="samplelink.com">Chris</a>. Inspired by <a href="http://whatthefuckshouldImakefordinner.com/">another dinner generator.</a></p>
+      <p>Singular Recipes is a Flatiron School student project by <a href="http://jessicashannon.github.io">Jess</a> and <a href="samplelink.com">Chris</a>. Inspired by <a href="http://whatthefuckshouldImakefordinner.com/">another dinner generator.</a></p>
     </div>
     </div>
 
