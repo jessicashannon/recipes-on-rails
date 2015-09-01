@@ -28,7 +28,7 @@ class Pet
   end
 
   def call_worked?
-    @parsed_hash && @parsed_hash["petfinder"]["pet"]["media"]
+    @parsed_hash && @parsed_hash["petfinder"]["pet"]["media"] && @parsed_hash["petfinder"]["pet"]["media"]["photos"]["photo"][2]["$t"]
   end
 
   def assign_photo_url
