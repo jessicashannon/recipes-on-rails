@@ -9,12 +9,16 @@ class Pet
     @animal_type = "cat"
     @url = "http://api.petfinder.com/pet.getRandom?key=#{PETAPI}&animal=#{@animal_type}&output=basic&format=json"
     apicall
-    if call_worked?
+    begin
       assign_photo_url
       assign_name
       assign_email
-    else
+    rescue
       call_failed
+    else
+      assign_photo_url
+      assign_name
+      assign_email
     end
   end
 
@@ -28,7 +32,13 @@ class Pet
   end
 
   def call_worked?
-    @parsed_hash && @parsed_hash["petfinder"]["pet"]["media"] && @parsed_hash["petfinder"]["pet"]["media"]["photos"]["photo"][2]["$t"]
+    begin
+      @parsed_hash && @parsed_hash["petfinder"]["pet"]["media"] && @parsed_hash["petfinder"]["pet"]["media"]["photos"]["photo"][2]["$t"]
+    rescue
+      call_failed
+    else
+      @parsed_hash
+    end
   end
 
   def assign_photo_url
