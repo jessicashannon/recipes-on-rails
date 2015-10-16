@@ -15,10 +15,6 @@ class Pet
       assign_email
     rescue
       call_failed
-    else
-      assign_photo_url
-      assign_name
-      assign_email
     end
   end
 
